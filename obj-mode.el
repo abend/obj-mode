@@ -6,10 +6,23 @@
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.obj\\'" . obj-mode))
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.mtl\\'" . obj-mode))
+
+(defvar obj-mode-builtins-re (concat "^" (regexp-opt '("d" "f" "s"
+                                                       "v" "vn" "vp" "vt"
+                                                       "Ka" "Ke" "Kd" "Ks"
+                                                       "Ni" "Ns"
+                                                       "Tf" "Tr"
+                                                       "illum" "bump" "disp" "decal" "refl"
+                                                       "map_d"
+                                                       "map_Ka" "map_Ke" "map_Kd" "map_Ks"
+                                                       "map_Ni" "map_Ns"
+                                                       "map_bump"))))
 
 (defvar obj-mode-keywords
-  '(("^\\(f\\|vn?\\|s\\)" . font-lock-builtin-face)
-    ("^\\(usemtl\\|mtllib\\).*" . font-lock-string-face)
+  `((,obj-mode-builtins-re . font-lock-builtin-face)
+    ("^\\(usemtl\\|mtllib\\|newmtl\\).*" . font-lock-string-face)
     ("^\\(o\\|g\\) .*" . font-lock-function-name-face)
     ("^#.*" . font-lock-comment-face)))
 
@@ -32,7 +45,7 @@
   (setq font-lock-defaults '(obj-mode-keywords))
   (set (make-local-variable 'comment-start) "# ")
   (set (make-local-variable 'paragraph-start) obj-mode-defun-regex)
-  (set (make-local-variable 'beginning-of-defun-function) 
+  (set (make-local-variable 'beginning-of-defun-function)
        'obj-beginning-of-defun)
   (set (make-local-variable 'end-of-defun-function)
        'obj-end-of-defun)
