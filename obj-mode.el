@@ -1,8 +1,14 @@
+;;; obj-mode.el -- Major mode for Wavefront obj files
+;;
+;; Version: 0.4
+;; Author: Sasha Kovar <sasha-emacs@arcocene.org>
+;; Url: http://github.com/abend/obj-mode
+;;
+;;; Commentary:
+;;
 ;; A hodepodge of quick random hacks for editing wavefront obj files.
 ;; Use as you wish.
 ;;
-;; Version .3  8 Jan 2013
-;; Sasha Kovar <sasha-emacs@arcocene.org>
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.obj\\'" . obj-mode))
@@ -91,3 +97,5 @@ Return t unless search stops due to beginning or end of buffer."
 
 
 (provide 'obj-mode)
+
+;;; obj-mode.el ends here
