@@ -1,4 +1,4 @@
-;;; obj-mode.el -- Major mode for Wavefront obj files
+;;; obj-mode.el --- Major mode for Wavefront obj files
 ;;
 ;; Version: 0.4
 ;; Author: Sasha Kovar <sasha-emacs@arcocene.org>
@@ -9,6 +9,8 @@
 ;; A hodepodge of quick random hacks for editing wavefront obj files.
 ;; Use as you wish.
 ;;
+
+;;; Code:
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.obj\\'" . obj-mode))
