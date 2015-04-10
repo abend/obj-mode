@@ -45,6 +45,7 @@
 (defvar obj-imenu-generic-expression
   `((nil ,obj-mode-defun-regex 2)))
 
+;;;###autoload
 (define-derived-mode obj-mode fundamental-mode "Obj"
   "Major mode for editing Wavefront obj ascii files.
 
