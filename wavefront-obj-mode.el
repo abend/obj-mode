@@ -1,8 +1,8 @@
-;;; obj-mode.el --- Major mode for Wavefront obj files
+;;; wavefront-obj-mode.el --- Major mode for Wavefront obj files
 ;;
-;; Version: 0.4
+;; Version: 0.5
 ;; Author: Sasha Kovar <sasha-emacs@arcocene.org>
-;; Url: http://github.com/abend/obj-mode
+;; Url: http://github.com/abend/wavefront-obj-mode
 ;;
 ;;; Commentary:
 ;;
