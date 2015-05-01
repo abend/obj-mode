@@ -12,11 +12,6 @@
 
 ;;; Code:
 
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.obj\\'" . wavefront-obj-mode))
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.mtl\\'" . wavefront-obj-mode))
-
 (defvar wavefront-obj-mode-builtins-re (concat "^" (regexp-opt '("d" "f" "s"
                                                                  "v" "vn" "vp" "vt"
                                                                  "Ka" "Ke" "Kd" "Ks"
