@@ -64,7 +64,7 @@
        wavefront-obj-imenu-generic-expression))
 
 (defun wavefront-obj-try-to-add-imenu ()
-  (condition-case nil (imenu-add-to-menubar "Imenu") (error nil)))
+  (ignore-errors (imenu-add-to-menubar "Imenu")))
 (add-hook 'wavefront-obj-mode-hook 'wavefront-obj-try-to-add-imenu)
 
 
